@@ -22,6 +22,18 @@ namespace GameOfThrones
         public MainWindow()
         {
             InitializeComponent();
+            AfficheDemarrage();
+        }
+        private void AfficheDemarrage()
+        {
+            // crée et charge l'écran de démarrage
+            UCDemarrage ucdemarrage = new UCDemarrage();
+
+            // associe l'écran au conteneur
+            ZoneDeJeu.Content = ucdemarrage;
+            
+
+           
         }
     }
 }
