@@ -6,8 +6,5 @@
         xmlns:local="clr-namespace:GameOfThrones"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="1000">
-    <Canvas>
-        
-
-    </Canvas>
+    <Canvas/>
 </Window>
