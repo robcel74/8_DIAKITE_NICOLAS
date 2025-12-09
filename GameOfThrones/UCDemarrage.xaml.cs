@@ -1,4 +1,8 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,15 +16,11 @@ using System.Windows.Shapes;
 namespace GameOfThrones
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logique d'interaction pour UCDemarrage.xaml
     /// </summary>
-    /// 
-
-    static readonly 
-
-    public partial class MainWindow : Window
+    public partial class UCDemarrage : UserControl
     {
-        public MainWindow()
+        public UCDemarrage()
         {
             InitializeComponent();
         }
