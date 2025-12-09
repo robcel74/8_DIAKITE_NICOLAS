@@ -16,10 +16,9 @@ namespace GameOfThrones
     /// </summary>
     /// 
 
-    static readonly 
-
     public partial class MainWindow : Window
     {
+        public static readonly int[] DIFFICULTES = [20, 30, 40];
         public MainWindow()
         {
             InitializeComponent();
