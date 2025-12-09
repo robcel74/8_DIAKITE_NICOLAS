@@ -7,9 +7,30 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="1000">
     <Grid>
-        <Label x:Name="labNomJeu" Content="Game Of Thrones" HorizontalAlignment="Center" Margin="0,51,0,0" VerticalAlignment="Top" Height="133" Width="748" Foreground="Red" FontSize="90" FontWeight="Bold"/>
-        <Button x:Name="butJouer" Content="Jouer" HorizontalAlignment="Center" VerticalAlignment="Top" Height="88" Width="398" Background="#FF490373" FontSize="72" FontWeight="Bold" Foreground="White" Margin="0,282,0,0"/>
-        <Button x:Name="butParametres" Content="Parametres" HorizontalAlignment="Center" Margin="0,405,0,0" VerticalAlignment="Top" Height="93" Width="398" Foreground="White" Background="#FF490373" FontWeight="Bold" FontSize="72"/>
+        <Image Source="/RESSOURCES/fond (1).jpg" Stretch="Fill"/>
+        <Button x:Name="butJouer" Content="" HorizontalAlignment="Left" Margin="310,470,0,0" VerticalAlignment="Top" Height="34" Width="177">
+            <Button.Foreground>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="butParametres" Content="" HorizontalAlignment="Left" Margin="522,470,0,0" VerticalAlignment="Top" Height="34" Width="193">
+            <Button.Foreground>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
+            </Button.Background>
+        </Button>
+
 
     </Grid>
 </UserControl>
