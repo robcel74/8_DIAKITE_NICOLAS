@@ -8,4 +8,30 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="RESSOURCES\DONJON\vueBas.jpg" />
+    <None Remove="RESSOURCES\DONJON\vueDerriere.jpg" />
+    <None Remove="RESSOURCES\DONJON\vueDessus.jpg" />
+    <None Remove="RESSOURCES\MAPS\Hiver.jpg" />
+    <None Remove="RESSOURCES\MAPS\HiverMaps.jpg" />
+    <None Remove="RESSOURCES\ROI\king-removebg-preview %281%29.png" />
+    <None Remove="RESSOURCES\ROI\king.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="RESSOURCES\DONJON\vueBas.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\DONJON\vueDerriere.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\DONJON\vueDessus.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\MAPS\Hiver.jpg" />
+    <Resource Include="RESSOURCES\MAPS\HiverMaps.jpg" />
+    <Resource Include="RESSOURCES\ROI\king-removebg-preview (1).png" />
+    <Resource Include="RESSOURCES\ROI\king.png" />
+  </ItemGroup>
+
 </Project>
