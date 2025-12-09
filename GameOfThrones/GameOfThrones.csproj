@@ -12,9 +12,9 @@
     <None Remove="RESSOURCES\DONJON\vueBas.jpg" />
     <None Remove="RESSOURCES\DONJON\vueDerriere.jpg" />
     <None Remove="RESSOURCES\DONJON\vueDessus.jpg" />
+    <None Remove="RESSOURCES\MAPS\dessert.jpg" />
     <None Remove="RESSOURCES\MAPS\Hiver.jpg" />
     <None Remove="RESSOURCES\MAPS\HiverMaps.jpg" />
-    <None Remove="RESSOURCES\ROI\king-removebg-preview %281%29.png" />
     <None Remove="RESSOURCES\ROI\king.png" />
   </ItemGroup>
 
@@ -28,9 +28,12 @@
     <Resource Include="RESSOURCES\DONJON\vueDessus.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="RESSOURCES\MAPS\dessert.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="RESSOURCES\MAPS\Hiver.jpg" />
     <Resource Include="RESSOURCES\MAPS\HiverMaps.jpg" />
-    <Resource Include="RESSOURCES\ROI\king-removebg-preview (1).png" />
+    <Resource Include="RESSOURCES\ROI\roi.png" />
     <Resource Include="RESSOURCES\ROI\king.png" />
   </ItemGroup>
 
