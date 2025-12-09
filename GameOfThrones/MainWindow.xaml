@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:GameOfThrones"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="1000">
-    <Grid>
+    <Canvas>
+        <Image Source="/RESSOURCES/ROI/king-removebg-preview (1).png" Stretch="Fill" Canvas.Left="457" Canvas.Top="220" Height="72" Width="86" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
-    </Grid>
+    </Canvas>
 </Window>
