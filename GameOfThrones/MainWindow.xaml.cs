@@ -23,6 +23,7 @@ namespace GameOfThrones
         {
             InitializeComponent();
             AfficheUCDemarrage();
+           
         }      
         private void AfficheUCDemarrage()
         {
