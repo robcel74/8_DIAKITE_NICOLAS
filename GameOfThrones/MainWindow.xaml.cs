@@ -37,6 +37,13 @@ namespace GameOfThrones
             UCMaps uc = new UCMaps();
             AireJeu.Content = uc;
             uc.but_retour.Click += RetourUCDemarrage;
+            uc.but_appliquer.Click += AfficheUCJeu;
+        }
+
+        private void AfficheUCJeu(object sender, RoutedEventArgs e)
+        {
+            UCJeu uc = new UCJeu();
+            AireJeu.Content=uc;
         }
 
         private void AfficheUCParametres(object sender, RoutedEventArgs e)
