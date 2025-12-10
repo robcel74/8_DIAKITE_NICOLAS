@@ -18,12 +18,40 @@ namespace GameOfThrones
 
     public partial class MainWindow : Window
     {
-        public static readonly int[] DIFFICULTES = [20, 30, 40];
+      
         public MainWindow()
         {
             InitializeComponent();
-            
+            AfficheUCDemarrage();
+        }      
+        private void AfficheUCDemarrage()
+        {
+            UCDemarrage uc = new UCDemarrage();
+            AireJeu.Content = uc;
+            uc.butParametres.Click += AfficheUCParametres;
+            uc.butJouer.Click += AfficheUCMaps;
         }
-     
+
+        private void AfficheUCMaps(object sender, RoutedEventArgs e)
+        {
+            UCMaps uc = new UCMaps();
+            AireJeu.Content = uc;
+            uc.but_retour.Click += RetourUCDemarrage;
+        }
+
+        private void AfficheUCParametres(object sender, RoutedEventArgs e)
+        {
+            UCParametres uc = new UCParametres();
+            AireJeu.Content=uc;
+            uc.but_retour.Click += RetourUCDemarrage;
+        }
+
+        private void RetourUCDemarrage(object sender, RoutedEventArgs e)
+        {
+            UCDemarrage uc = new UCDemarrage();
+            AireJeu.Content = uc;
+            uc.butParametres.Click += AfficheUCParametres;
+            uc.butJouer.Click += AfficheUCMaps;
+        }
     }
 }

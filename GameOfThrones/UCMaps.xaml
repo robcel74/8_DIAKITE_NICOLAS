@@ -26,5 +26,7 @@
         </RadioButton>
         <Label x:Name="lab_choixmaps" Content="Choisir une maps" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFC10202" FontSize="72" FontWeight="Bold"/>
 
+        <Button x:Name="but_retour" Content="Retour" HorizontalAlignment="Left" Margin="37,10,0,0" VerticalAlignment="Top" Width="140" Height="45" FontSize="22" Background="#FF442626" Foreground="White" FontWeight="Bold"/>
+
     </Grid>
 </UserControl>

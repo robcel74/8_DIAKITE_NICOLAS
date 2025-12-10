@@ -12,6 +12,7 @@
     <None Remove="RESSOURCES\DONJON\vueBas.jpg" />
     <None Remove="RESSOURCES\DONJON\vueDerriere.jpg" />
     <None Remove="RESSOURCES\DONJON\vueDessus.jpg" />
+    <None Remove="RESSOURCES\icone_son.png" />
     <None Remove="RESSOURCES\MAPS\dessert.jpg" />
     <None Remove="RESSOURCES\MAPS\Hiver.jpg" />
     <None Remove="RESSOURCES\MAPS\HiverMaps.jpg" />
@@ -26,6 +27,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="RESSOURCES\DONJON\vueDessus.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\fondDemarage.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\icone_son.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="RESSOURCES\MAPS\dessert.jpg">

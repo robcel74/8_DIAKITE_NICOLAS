@@ -7,19 +7,16 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="1000">
     <Grid>
-        <Image Source="/RESSOURCES/fond (1).jpg" Stretch="Fill"/>
-        <Button x:Name="butJouer" Content="" HorizontalAlignment="Left" Margin="310,470,0,0" VerticalAlignment="Top" Height="34" Width="177">
+        <Image Source="/RESSOURCES/fondDemarage.jpg" Stretch="Fill"/>
+        <Button x:Name="butJouer" Content="" HorizontalAlignment="Left" Margin="303,468,0,0" VerticalAlignment="Top" Height="34" Width="177" Background="{x:Null}">
             <Button.Foreground>
                 <SolidColorBrush Color="Black" Opacity="0"/>
             </Button.Foreground>
             <Button.BorderBrush>
                 <SolidColorBrush Color="#FF707070" Opacity="0"/>
             </Button.BorderBrush>
-            <Button.Background>
-                <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
-            </Button.Background>
         </Button>
-        <Button x:Name="butParametres" Content="" HorizontalAlignment="Left" Margin="522,470,0,0" VerticalAlignment="Top" Height="34" Width="193">
+        <Button x:Name="butParametres" Content="" HorizontalAlignment="Left" Margin="522,468,0,0" VerticalAlignment="Top" Height="34" Width="193">
             <Button.Foreground>
                 <SolidColorBrush Color="Black" Opacity="0"/>
             </Button.Foreground>

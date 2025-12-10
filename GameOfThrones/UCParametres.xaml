@@ -6,7 +6,28 @@
              xmlns:local="clr-namespace:GameOfThrones"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="1000">
-    <Grid>
-            
+    <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFC5BDBD"/>
+                <GradientStop Color="#FFB98E8E" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label x:Name="lab_musique" Content="Musique" HorizontalAlignment="Left" Margin="117,110,0,0" VerticalAlignment="Top" FontSize="48" FontWeight="Bold"/>
+        <Label x:Name="lab_effet" Content="Effet Sonore" HorizontalAlignment="Left" Margin="117,200,0,0" VerticalAlignment="Top" FontSize="48" FontWeight="Bold"/>
+        <Label x:Name="lab_diff" Content="Difficulté" HorizontalAlignment="Left" Margin="117,290,0,0" VerticalAlignment="Top" FontSize="48" FontWeight="Bold"/>
+        <Image x:Name="imgSon_musique" Margin="500,120,446,426" Source="/RESSOURCES/icone_son.png" Stretch="Fill"/>
+        <Image x:Name="imgSon_effet" Margin="500,210,446,336" Source="/RESSOURCES/icone_son.png" Stretch="Fill"/>
+        <Button x:Name="but_retour" Content="Retour" HorizontalAlignment="Left" Margin="37,10,0,0" VerticalAlignment="Top" Width="140" Height="45" FontSize="22" Background="#FF442626" Foreground="White" FontWeight="Bold"/>
+        <Button x:Name="but_appliquer" Content="OK" HorizontalAlignment="Center" Margin="0,459,0,0" VerticalAlignment="Top" Width="230" Height="70" FontSize="36" Background="#FF442626" Foreground="White" FontWeight="Bold"/>
+
+        <ComboBox Width="200" SelectedIndex="0" Height="50" Margin="500,311,300,239" FontSize="34" FontWeight="Bold">
+            <ComboBoxItem>Facile</ComboBoxItem>
+            <ComboBoxItem>Moyen</ComboBoxItem>
+            <ComboBoxItem>Difficile</ComboBoxItem>
+        </ComboBox>
+
+
+
     </Grid>
 </UserControl>
