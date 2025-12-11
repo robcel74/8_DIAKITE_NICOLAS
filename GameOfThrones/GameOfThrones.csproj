@@ -21,7 +21,7 @@
     <None Remove="RESSOURCES\MAPS\MapJungle.png" />
     <None Remove="RESSOURCES\MAPS\MapSable.jpg" />
     <None Remove="RESSOURCES\MAPS\MapUnivers.jpg" />
-    <None Remove="RESSOURCES\parchemin.jpg" />
+    <None Remove="RESSOURCES\regles.jpg" />
     <None Remove="RESSOURCES\ROI\king.png" />
   </ItemGroup>
 
@@ -58,7 +58,7 @@
     <Resource Include="RESSOURCES\MAPS\MapJungle.png" />
     <Resource Include="RESSOURCES\MAPS\MapSable.jpg" />
     <Resource Include="RESSOURCES\MAPS\MapUnivers.jpg" />
-    <Resource Include="RESSOURCES\parchemin.jpg">
+    <Resource Include="RESSOURCES\regles.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="RESSOURCES\ROI\roi.png" />
