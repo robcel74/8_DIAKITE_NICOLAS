@@ -24,5 +24,25 @@ namespace GameOfThrones
         {
             InitializeComponent();
         }
+
+        private void mpJungle_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void mpHiver_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void mpPlage_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void mpLave_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
