@@ -14,6 +14,11 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Image Source="/RESSOURCES/regles.jpg" Stretch="Fill"/>
+        <Label x:Name="lab_regleN1" Content="Règle N°1" HorizontalAlignment="Center" Margin="0,371,0,0" VerticalAlignment="Top" FontSize="48" FontFamily="Colonna MT" FontWeight="Bold" Foreground="#FF3E0909"/>
+        <Label x:Name="lab_regle1" Content="Sauver le donjon des ennemies qui l'attaquent" HorizontalAlignment="Left" Margin="319,437,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Colonna MT" FontWeight="Bold" Foreground="Black" Width="407"/>
+
+        <Button x:Name="but_suivant" Content="suivant" HorizontalAlignment="Left" Margin="360,500,0,0" VerticalAlignment="Top" Width="140" Height="45" FontSize="22" Background="#FF442626" Foreground="White" FontWeight="Bold" Click="but_suivant_Click"/>
+        <Button x:Name="but_skip" Content="skip" HorizontalAlignment="Left" Margin="552,500,0,0" VerticalAlignment="Top" Width="140" Height="45" FontSize="22" Background="#FF442626" Foreground="White" FontWeight="Bold"/>
 
     </Grid>
 </UserControl>
