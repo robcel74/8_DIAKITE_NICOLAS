@@ -9,23 +9,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="RESSOURCES\choixmaps.jpg" />
     <None Remove="RESSOURCES\DONJON\vueBas.jpg" />
     <None Remove="RESSOURCES\DONJON\vueDerriere.jpg" />
     <None Remove="RESSOURCES\DONJON\vueDessus.jpg" />
     <None Remove="RESSOURCES\gameover.jpg" />
     <None Remove="RESSOURCES\icone_son.png" />
     <None Remove="RESSOURCES\levelup.jpg" />
-    <None Remove="RESSOURCES\MAPS\dessert.jpg" />
-    <None Remove="RESSOURCES\MAPS\Hiver.jpg" />
-    <None Remove="RESSOURCES\MAPS\HiverMaps.jpg" />
+    <None Remove="RESSOURCES\MAPS\MapHiver.jpg" />
     <None Remove="RESSOURCES\MAPS\MapJungle.png" />
+    <None Remove="RESSOURCES\MAPS\MapLave.jpg" />
     <None Remove="RESSOURCES\MAPS\MapSable.jpg" />
-    <None Remove="RESSOURCES\MAPS\MapUnivers.jpg" />
     <None Remove="RESSOURCES\regles.jpg" />
     <None Remove="RESSOURCES\ROI\king.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="RESSOURCES\choixmaps.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="RESSOURCES\gameover.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -50,14 +52,14 @@
     <Resource Include="RESSOURCES\icone_son.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="RESSOURCES\MAPS\dessert.jpg">
+    <Resource Include="RESSOURCES\MAPS\MapHiver.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="RESSOURCES\MAPS\Hiver.jpg" />
-    <Resource Include="RESSOURCES\MAPS\HiverMaps.jpg" />
     <Resource Include="RESSOURCES\MAPS\MapJungle.png" />
+    <Resource Include="RESSOURCES\MAPS\MapLave.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="RESSOURCES\MAPS\MapSable.jpg" />
-    <Resource Include="RESSOURCES\MAPS\MapUnivers.jpg" />
     <Resource Include="RESSOURCES\regles.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>

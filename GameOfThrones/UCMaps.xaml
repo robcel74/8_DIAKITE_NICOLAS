@@ -8,6 +8,8 @@
              d:DesignHeight="600" d:DesignWidth="1000">
     <Grid>
 
+        <Image x:Name="imgChoixMaps" Source="/RESSOURCES/choixmaps.jpg" Stretch="Fill" Opacity="0.3"/>
+
         <RadioButton x:Name="mpDesert" Margin="551,121,137,271"  >
             <RadioButton.Content>
                 <Image Source="/RESSOURCES/MAPS/MapJungle.png" Width="286" Height="224"/>
@@ -19,7 +21,7 @@
 
         <RadioButton x:Name="mpHiver" Margin="64,121,622,271"   >
             <RadioButton.Content>
-                <Image  Source="/RESSOURCES/MAPS/Hiver.jpg" Width="285" Height="225" />
+                <Image  Source="/RESSOURCES/MAPS/MapHiver.jpg" Width="285" Height="225" />
 
             </RadioButton.Content>
 
@@ -36,13 +38,13 @@
 
 
 
-        <Label x:Name="lab_choixmaps" Content="Choisir une maps" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFC10202" FontSize="72" FontWeight="Bold"/>
+        <Label x:Name="lab_choixmaps" Content="Choisir une map" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFC10202" FontSize="72" FontWeight="Bold"/>
 
         <Button x:Name="but_retour" Content="Retour" HorizontalAlignment="Left" Margin="37,10,0,0" VerticalAlignment="Top" Width="140" Height="45" FontSize="22" Background="#FF442626" Foreground="White" FontWeight="Bold"/>
 
         <Button x:Name="but_appliquer" Content="OK" HorizontalAlignment="Center" Margin="0,520,0,0" VerticalAlignment="Top" Width="230" Height="70" FontSize="36" Background="#FF442626" Foreground="White" FontWeight="Bold"/>
         <RadioButton x:Name="mpHiver_Copy1" Margin="551,329,135,63"   >
-            <Image  Source="/RESSOURCES/MAPS/MapUnivers.jpg" Width="285" Height="225" />
+            <Image  Source="/RESSOURCES/MAPS/MapLave.jpg" Width="285" Height="225" />
 
         </RadioButton>
 
