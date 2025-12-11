@@ -45,7 +45,7 @@ namespace GameOfThrones
         {
             UCJeu uc = new UCJeu();
             AireJeu.Content=uc;
-            uc.
+            
         }
 
         private void AfficheUCParametres(object sender, RoutedEventArgs e)
@@ -61,6 +61,13 @@ namespace GameOfThrones
             AireJeu.Content = uc;
             uc.butParametres.Click += AfficheUCParametres;
             uc.butJouer.Click += AfficheUCMaps;
+        }
+
+        public void AfficheUCGameOver()
+        {
+            UCGameOver uc = new UCGameOver();
+            AireJeu.Content = uc;
+
         }
     }
 }

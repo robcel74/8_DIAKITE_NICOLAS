@@ -288,9 +288,11 @@ namespace GameOfThrones
         private void DeclencherFinDePartie()
         {
             minuteurJeu.Stop();
-            MessageBox.Show("Le Donjon est détruit !");
+            UCGameOver uc = new UCGameOver();
+            ((MainWindow)Application.Current.MainWindow).AireJeu.Content = uc;
             estJeuEnCours = false;
             DemarrerPartie();
+         
         }
 
     }

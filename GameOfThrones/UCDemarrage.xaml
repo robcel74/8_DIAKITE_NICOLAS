@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="1000">
     <Grid>
-        <Image Source="/RESSOURCES/fondDemarage.jpg" Stretch="Fill"/>
+        <Image Source="/RESSOURCES/fondDemarage.jpg" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Button x:Name="butJouer" Content="" HorizontalAlignment="Left" Margin="303,468,0,0" VerticalAlignment="Top" Height="34" Width="177" Background="{x:Null}">
             <Button.Foreground>
                 <SolidColorBrush Color="Black" Opacity="0"/>

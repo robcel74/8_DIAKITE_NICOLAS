@@ -12,12 +12,25 @@
     <None Remove="RESSOURCES\DONJON\vueBas.jpg" />
     <None Remove="RESSOURCES\DONJON\vueDerriere.jpg" />
     <None Remove="RESSOURCES\DONJON\vueDessus.jpg" />
+    <None Remove="RESSOURCES\gameover.jpg" />
     <None Remove="RESSOURCES\icone_son.png" />
+    <None Remove="RESSOURCES\levelup.jpg" />
     <None Remove="RESSOURCES\MAPS\dessert.jpg" />
     <None Remove="RESSOURCES\MAPS\Hiver.jpg" />
     <None Remove="RESSOURCES\MAPS\HiverMaps.jpg" />
+    <None Remove="RESSOURCES\MAPS\MapJungle.png" />
     <None Remove="RESSOURCES\MAPS\MapSable.jpg" />
+    <None Remove="RESSOURCES\MAPS\MapUnivers.jpg" />
     <None Remove="RESSOURCES\ROI\king.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="RESSOURCES\gameover.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\levelup.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -41,7 +54,9 @@
     </Resource>
     <Resource Include="RESSOURCES\MAPS\Hiver.jpg" />
     <Resource Include="RESSOURCES\MAPS\HiverMaps.jpg" />
+    <Resource Include="RESSOURCES\MAPS\MapJungle.png" />
     <Resource Include="RESSOURCES\MAPS\MapSable.jpg" />
+    <Resource Include="RESSOURCES\MAPS\MapUnivers.jpg" />
     <Resource Include="RESSOURCES\ROI\roi.png" />
     <Resource Include="RESSOURCES\ROI\king.png" />
   </ItemGroup>
