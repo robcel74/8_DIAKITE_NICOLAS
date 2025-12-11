@@ -45,6 +45,7 @@ namespace GameOfThrones
         {
             UCReglesJeu uc = new UCReglesJeu();
             AireJeu.Content = uc;
+            uc.but_skip.Click += AfficheUCJeu;
         }
 
         private void AfficheUCJeu(object sender, RoutedEventArgs e)
