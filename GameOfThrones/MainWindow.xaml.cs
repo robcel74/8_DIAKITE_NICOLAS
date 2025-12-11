@@ -18,7 +18,8 @@ namespace GameOfThrones
 
     public partial class MainWindow : Window
     {
-      
+
+        public static string Map { get; set; }
         public MainWindow()
         {
             InitializeComponent();

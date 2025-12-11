@@ -43,6 +43,10 @@ namespace GameOfThrones
         public UCJeu()
         {
             InitializeComponent();
+            string nomFichierImage = $"pack://application:,,,/RESSOURCES/MAPS/Map{MainWindow.Map}.jpg";
+            imgMap.Source = new BitmapImage(new Uri(nomFichierImage));
+
+
 
             // Configuration du minuteur (environ 60 images par seconde)
             minuteurJeu.Interval = TimeSpan.FromMilliseconds(16);

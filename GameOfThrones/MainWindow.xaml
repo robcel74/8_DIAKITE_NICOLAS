@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameOfThrones"
         mc:Ignorable="d"
-        Title="Game Of Thrones" Height="600" Width="1000" ResizeMode="NoResize" Background="Black">
-    <ContentControl x:Name="AireJeu" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1000" Height="600">
+        Title="Game Of Thrones" Height="600" Width="1000" ResizeMode="NoResize" Background="Black" WindowStyle="None">
+    
+    <ContentControl x:Name="AireJeu" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1000" Height="600"/>
+    
 
-    </ContentControl>
 </Window>

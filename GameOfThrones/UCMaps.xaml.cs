@@ -20,6 +20,7 @@ namespace GameOfThrones
     /// </summary>
     public partial class UCMaps : UserControl
     {
+
         public UCMaps()
         {
             InitializeComponent();
@@ -27,22 +28,26 @@ namespace GameOfThrones
 
         private void mpJungle_Click(object sender, RoutedEventArgs e)
         {
-
+            but_appliquer.IsEnabled = true;
+            MainWindow.Map = "Jungle";
         }
 
         private void mpHiver_Click(object sender, RoutedEventArgs e)
         {
-
+            but_appliquer.IsEnabled = true;
+            MainWindow.Map = "Hiver";
         }
 
-        private void mpPlage_Click(object sender, RoutedEventArgs e)
+        private void mpSable_Click(object sender, RoutedEventArgs e)
         {
-
+            but_appliquer.IsEnabled = true;
+            MainWindow.Map = "Sable";
         }
 
         private void mpLave_Click(object sender, RoutedEventArgs e)
         {
-
+            but_appliquer.IsEnabled = true;
+            MainWindow.Map = "Lave";
         }
     }
 }
