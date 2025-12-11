@@ -38,7 +38,13 @@ namespace GameOfThrones
             UCMaps uc = new UCMaps();
             AireJeu.Content = uc;
             uc.but_retour.Click += RetourUCDemarrage;
-            uc.but_appliquer.Click += AfficheUCJeu;
+            uc.but_appliquer.Click += AfficheUCRegles;
+        }
+
+        private void AfficheUCRegles(object sender, RoutedEventArgs e)
+        {
+            UCReglesJeu uc = new UCReglesJeu();
+            AireJeu.Content = uc;
         }
 
         private void AfficheUCJeu(object sender, RoutedEventArgs e)
@@ -66,6 +72,12 @@ namespace GameOfThrones
         public void AfficheUCGameOver()
         {
             UCGameOver uc = new UCGameOver();
+            AireJeu.Content = uc;
+
+        }
+        public void AfficheUCRegle()
+        {
+            UCReglesJeu uc = new UCReglesJeu();
             AireJeu.Content = uc;
 
         }

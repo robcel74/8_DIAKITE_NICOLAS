@@ -13,6 +13,7 @@
                 <GradientStop Color="#FF3E0909" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
+        <Image Margin="0,-88,0,-60" Source="/RESSOURCES/parchemin.jpg" Stretch="Fill"/>
 
     </Grid>
 </UserControl>
