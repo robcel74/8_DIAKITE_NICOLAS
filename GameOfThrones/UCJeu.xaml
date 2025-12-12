@@ -14,7 +14,7 @@
              MouseDown="UserControl_MouseDown" Width="1000" Height="600">
 
     <Grid x:Name="MainGrid">
-        <Image x:Name="imgMap" Height="600" Width="1000"/>
+        <Image x:Name="imgMap" Stretch="Fill"/>
         <Canvas x:Name="GameCanvas" Background="Transparent" Width="1000" Height="600">
             <TextBlock x:Name="StatusText" Foreground="White" FontSize="20" Canvas.Left="10" Canvas.Top="10" Text="Vie Donjon: 100"/>
         </Canvas>
