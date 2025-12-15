@@ -27,7 +27,7 @@ namespace GameOfThrones
 
         private void but_suivant_Click(object sender, RoutedEventArgs e)
         {
-            lab_regleN1.Content = "Regle N°2";
+            lab_regleN1.Content = "Règle N°2";
             lab_regle1.Content = "Tenir le plus longtemps possible";
             but_suivant.IsEnabled = false;
             but_skip.Content = "Jouer";
