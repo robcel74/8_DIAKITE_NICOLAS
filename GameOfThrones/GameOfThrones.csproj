@@ -20,6 +20,10 @@
     <None Remove="RESSOURCES\MAPS\MapJungle.jpg" />
     <None Remove="RESSOURCES\MAPS\MapLave.jpg" />
     <None Remove="RESSOURCES\MAPS\MapSable.jpg" />
+    <None Remove="RESSOURCES\MUSIQUES\archer.mp3" />
+    <None Remove="RESSOURCES\MUSIQUES\dragon_qui_crache.mp3" />
+    <None Remove="RESSOURCES\MUSIQUES\dragon_qui_vole.mp3" />
+    <None Remove="RESSOURCES\MUSIQUES\musique_fond.mp3" />
     <None Remove="RESSOURCES\regles.jpg" />
     <None Remove="RESSOURCES\ROI\king.png" />
   </ItemGroup>
@@ -59,6 +63,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="RESSOURCES\MAPS\MapSable.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\MUSIQUES\archer.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\MUSIQUES\dragon_qui_crache.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\MUSIQUES\dragon_qui_vole.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\MUSIQUES\musique_fond.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="RESSOURCES\regles.jpg">
