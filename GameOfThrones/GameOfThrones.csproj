@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -23,7 +23,6 @@
     <None Remove="RESSOURCES\MUSIQUES\archer.mp3" />
     <None Remove="RESSOURCES\MUSIQUES\dragon_qui_crache.mp3" />
     <None Remove="RESSOURCES\MUSIQUES\dragon_qui_vole.mp3" />
-    <None Remove="RESSOURCES\MUSIQUES\musique_fond.mp3" />
     <None Remove="RESSOURCES\regles.jpg" />
     <None Remove="RESSOURCES\ROI\king.png" />
   </ItemGroup>
@@ -74,14 +73,17 @@
     <Resource Include="RESSOURCES\MUSIQUES\dragon_qui_vole.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="RESSOURCES\MUSIQUES\musique_fond.mp3">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="RESSOURCES\regles.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="RESSOURCES\ROI\roi.png" />
     <Resource Include="RESSOURCES\ROI\king.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="RESSOURCES\MUSIQUES\musique_fond.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

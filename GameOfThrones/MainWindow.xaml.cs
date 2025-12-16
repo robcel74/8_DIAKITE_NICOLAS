@@ -10,14 +10,15 @@ namespace GameOfThrones
 
     public partial class MainWindow : Window
     {
-
+        private MediaPlayer musiqueFond;
         public static string Map { get; set; }
         public MainWindow()
         {
             InitializeComponent();
             AfficheUCDemarrage();
-
+            InitialiserMusique();
         }
+            
 
 
 
@@ -78,6 +79,21 @@ namespace GameOfThrones
             AireJeu.Content = uc;
 
         }
+        private void InitialiserMusique()
+        {
+            musiqueFond = new MediaPlayer();
+            musiqueFond.Open(new Uri(AppDomain.CurrentDomain.BaseDirectory + "RESSOURCES/MUSIQUES/musique_fond.mp3"));
+
+            musiqueFond.Volume =0.5;
+
+            musiqueFond.Play();
+        }
+        private void RelanceMusique(object? sender, EventArgs e)
+        {
+            musiqueFond.Position = TimeSpan.Zero;
+            musiqueFond.Play();
+        }
+
 
 
     }
