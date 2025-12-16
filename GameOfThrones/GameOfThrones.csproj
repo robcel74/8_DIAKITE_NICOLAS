@@ -24,6 +24,7 @@
     <None Remove="RESSOURCES\EcranDemarrage.jpg" />
     <None Remove="RESSOURCES\gameover.jpg" />
     <None Remove="RESSOURCES\icone_son.png" />
+    <None Remove="RESSOURCES\ImgPause.png" />
     <None Remove="RESSOURCES\levelup.jpg" />
     <None Remove="RESSOURCES\MAPS\MapHiver.jpg" />
     <None Remove="RESSOURCES\MAPS\MapJungle.jpg" />
@@ -75,6 +76,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="RESSOURCES\gameover.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\ImgPause.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="RESSOURCES\levelup.jpg">
