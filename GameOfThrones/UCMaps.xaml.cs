@@ -26,28 +26,13 @@ namespace GameOfThrones
             InitializeComponent();
         }
 
-        private void mpJungle_Click(object sender, RoutedEventArgs e)
+        private void Map_Click(object sender, RoutedEventArgs e)
         {
-            but_appliquer.IsEnabled = true;
-            MainWindow.Map = "Jungle";
-        }
-
-        private void mpHiver_Click(object sender, RoutedEventArgs e)
-        {
-            but_appliquer.IsEnabled = true;
-            MainWindow.Map = "Hiver";
-        }
-
-        private void mpSable_Click(object sender, RoutedEventArgs e)
-        {
-            but_appliquer.IsEnabled = true;
-            MainWindow.Map = "Sable";
-        }
-
-        private void mpLave_Click(object sender, RoutedEventArgs e)
-        {
-            but_appliquer.IsEnabled = true;
-            MainWindow.Map = "Lave";
+            if (sender is RadioButton btn && btn.Name is string map)
+            {
+                but_appliquer.IsEnabled = true;
+                MainWindow.Map = map;
+            }
         }
     }
 }
