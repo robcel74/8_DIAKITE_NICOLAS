@@ -91,7 +91,7 @@ namespace GameOfThrones
             UCPause uc = new UCPause();
             AireJeu.Content = uc;
             uc.butReprendre.Click += AfficheUCJeu;
-
+            uc.butMaps.Click += AfficheUCMaps;
             uc.butQuitter.Click += RetourUCDemarrage;
         }
 

@@ -19,7 +19,7 @@
                 <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
             </Button.Background>
         </Button>
-        <Button x:Name="butBoutique" Content="" HorizontalAlignment="Center" Margin="0,537,0,0" VerticalAlignment="Top" Height="34" Width="196">
+        <Button x:Name="butMaps" Content="" HorizontalAlignment="Center" Margin="0,537,0,0" VerticalAlignment="Top" Height="34" Width="196">
             <Button.Foreground>
                 <SolidColorBrush Color="Black" Opacity="0"/>
             </Button.Foreground>
