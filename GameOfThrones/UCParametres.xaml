@@ -21,6 +21,15 @@
         <Button x:Name="but_retour" Content="Retour" HorizontalAlignment="Left" Margin="37,10,0,0" VerticalAlignment="Top" Width="140" Height="45" FontSize="22" Background="#FF442626" Foreground="White" FontWeight="Bold"/>
         <Button x:Name="but_appliquer" Content="OK" HorizontalAlignment="Center" Margin="0,459,0,0" VerticalAlignment="Top" Width="230" Height="70" FontSize="36" Background="#FF442626" Foreground="White" FontWeight="Bold"/>
 
+        <Slider x:Name="SliderVolume" 
+                Width="200" 
+                Minimum="0" 
+                Maximum="1" 
+                LargeChange="0.1"
+                ValueChanged="SliderVolume_ValueChanged" Margin="615,134,185,440" Height="25">
+           
+        </Slider>
+
         <ComboBox Width="200" SelectedIndex="0" Height="50" Margin="500,311,300,239" FontSize="34" FontWeight="Bold">
             <ComboBoxItem>Facile</ComboBoxItem>
             <ComboBoxItem>Moyen</ComboBoxItem>

@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Media;
+using System.Windows;
 using System.Windows.Media;
 
 namespace GameOfThrones
@@ -11,6 +12,8 @@ namespace GameOfThrones
     public partial class MainWindow : Window
     {
         private MediaPlayer musiqueFond;
+        private static SoundPlayer sonCadeauGagne;
+
         public static string Map { get; set; }
         public MainWindow()
         {
@@ -18,9 +21,9 @@ namespace GameOfThrones
             AfficheUCDemarrage();
             InitialiserMusique();
         }
-            
 
 
+        //GESTION DES UC
 
         private void AfficheUCDemarrage()
         {
@@ -49,6 +52,8 @@ namespace GameOfThrones
         {
             UCJeu uc = new UCJeu();
             AireJeu.Content = uc;
+            musiqueFond.Stop();
+            
 
         }
 
@@ -79,6 +84,12 @@ namespace GameOfThrones
             AireJeu.Content = uc;
 
         }
+
+
+
+
+
+        //GESTION DES MUSIQUES
         private void InitialiserMusique()
         {
             musiqueFond = new MediaPlayer();
@@ -93,6 +104,24 @@ namespace GameOfThrones
             musiqueFond.Position = TimeSpan.Zero;
             musiqueFond.Play();
         }
+
+        public void ChangerVolume(double nouveauVolume)
+        {
+            if (musiqueFond != null)
+            {
+                musiqueFond.Volume = nouveauVolume;
+            }
+        }
+
+        // Ajoute aussi ça pour que le Slider sache à combien on est au début
+        public double GetVolumeActuel()
+        {
+            if (musiqueFond != null) return musiqueFond.Volume;
+            return 0.5; // Valeur par défaut
+        }
+      
+       
+        
 
 
 

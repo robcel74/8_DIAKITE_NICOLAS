@@ -9,9 +9,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="RESSOURCES\DONJON\vueBas.jpg" />
-    <None Remove="RESSOURCES\DONJON\vueDerriere.jpg" />
-    <None Remove="RESSOURCES\DONJON\vueDessus.jpg" />
+    <None Remove="RESSOURCES\DRAGON\dragon_droite1.png" />
+    <None Remove="RESSOURCES\DRAGON\dragon_droite2.png" />
+    <None Remove="RESSOURCES\DRAGON\dragon_droite3.png" />
+    <None Remove="RESSOURCES\DRAGON\dragon_face1.png" />
+    <None Remove="RESSOURCES\DRAGON\dragon_face2.png" />
+    <None Remove="RESSOURCES\DRAGON\dragon_face3.png" />
+    <None Remove="RESSOURCES\DRAGON\dragon_gauche1.png" />
+    <None Remove="RESSOURCES\DRAGON\dragon_gauche2.png" />
+    <None Remove="RESSOURCES\DRAGON\dragon_gauche3.png" />
+    <None Remove="RESSOURCES\DRAGON\dragon_haut1.png" />
+    <None Remove="RESSOURCES\DRAGON\dragon_haut2.png" />
+    <None Remove="RESSOURCES\DRAGON\dragon_haut3.png" />
     <None Remove="RESSOURCES\EcranDemarrage.jpg" />
     <None Remove="RESSOURCES\gameover.jpg" />
     <None Remove="RESSOURCES\icone_son.png" />
@@ -20,14 +29,48 @@
     <None Remove="RESSOURCES\MAPS\MapJungle.jpg" />
     <None Remove="RESSOURCES\MAPS\MapLave.jpg" />
     <None Remove="RESSOURCES\MAPS\MapSable.jpg" />
-    <None Remove="RESSOURCES\MUSIQUES\archer.mp3" />
     <None Remove="RESSOURCES\MUSIQUES\dragon_qui_crache.mp3" />
     <None Remove="RESSOURCES\MUSIQUES\dragon_qui_vole.mp3" />
     <None Remove="RESSOURCES\regles.jpg" />
-    <None Remove="RESSOURCES\ROI\king.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="RESSOURCES\DRAGON\dragon_droite1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\DRAGON\dragon_droite2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\DRAGON\dragon_droite3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\DRAGON\dragon_face1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\DRAGON\dragon_face2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\DRAGON\dragon_face3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\DRAGON\dragon_gauche1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\DRAGON\dragon_gauche2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\DRAGON\dragon_gauche3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\DRAGON\dragon_haut1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\DRAGON\dragon_haut2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\DRAGON\dragon_haut3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="RESSOURCES\EcranDemarrage.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -40,15 +83,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="RESSOURCES\DONJON\vueBas.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="RESSOURCES\DONJON\vueDerriere.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="RESSOURCES\DONJON\vueDessus.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="RESSOURCES\icone_son.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -64,7 +98,7 @@
     <Resource Include="RESSOURCES\MAPS\MapSable.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="RESSOURCES\MUSIQUES\archer.mp3">
+    <Resource Include="RESSOURCES\MUSIQUES\archer.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="RESSOURCES\MUSIQUES\dragon_qui_crache.mp3">
@@ -76,8 +110,6 @@
     <Resource Include="RESSOURCES\regles.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="RESSOURCES\ROI\roi.png" />
-    <Resource Include="RESSOURCES\ROI\king.png" />
   </ItemGroup>
 
   <ItemGroup>

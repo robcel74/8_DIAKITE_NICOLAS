@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -21,15 +22,20 @@ namespace GameOfThrones
     /// </summary>
     public partial class UCJeu : UserControl
     {
-        
+    
         DispatcherTimer minuteurJeu = new DispatcherTimer();
         
         bool allerHaut, allerBas, allerGauche, allerDroite;
 
         // Éléments du jeu
         Rectangle formeDonjon;
-        Ellipse formeRoi;
+        Image imageDragon;
         double vitesseRoi = 5;
+
+        // 2. VARIABLES POUR L'ANIMATION
+        int numeroImage = 1;          // Sera 1, 2 ou 3
+        string direction = "bas";     // haut, bas, gauche, droite
+        int compteurAnimation = 0;    // Pour ne pas changer d'image trop vite
 
         // Listes d'entités
         List<Ellipse> listeEnnemis = new List<Ellipse>();
@@ -119,12 +125,37 @@ namespace GameOfThrones
             GameCanvas.Children.Add(formeDonjon);
 
             // Création du Roi
-            formeRoi = new Ellipse { Width = 20, Height = 20, Fill = Brushes.CornflowerBlue };
-            Canvas.SetLeft(formeRoi, centreX);
-            Canvas.SetTop(formeRoi, centreY + 50);
-            GameCanvas.Children.Add(formeRoi);
+            imageDragon = new Image();
+            imageDragon.Width = 50;  // Ajuste la taille selon tes images
+            imageDragon.Height = 50;
+
+            MettreAJourSprite();
+
+            Canvas.SetLeft(imageDragon, centreX);
+            Canvas.SetTop(imageDragon, centreY + 50);
+            GameCanvas.Children.Add(imageDragon);
 
             minuteurJeu.Start();
+        }
+        private void MettreAJourSprite()
+        {
+            try
+            {
+                // On construit le nom : "dragon_" + "haut" + "1" + ".png"
+                // Assure-toi que tes images sont bien en .png ou .jpg
+                string cheminImage = $"pack://application:,,,/RESSOURCES/DRAGON/dragon_{direction}{numeroImage}.png";
+
+                BitmapImage bitmap = new BitmapImage();
+                bitmap.BeginInit();
+                bitmap.UriSource = new Uri(cheminImage);
+                bitmap.EndInit();
+
+                imageDragon.Source = bitmap;
+            }
+            catch
+            {
+                // Si l'image n'est pas trouvée, ça évite le crash
+            }
         }
 
         private void BouclePrincipaleJeu(object sender, EventArgs e)
@@ -137,16 +168,68 @@ namespace GameOfThrones
 
         private void DeplacerRoi()
         {
-            double posX = Canvas.GetLeft(formeRoi);
-            double posY = Canvas.GetTop(formeRoi);
+            double posX = Canvas.GetLeft(imageDragon); // On utilise imageDragon
+            double posY = Canvas.GetTop(imageDragon);
 
-            if (allerHaut && posY > 0) posY -= vitesseRoi;
-            if (allerBas && posY < this.ActualHeight - 20) posY += vitesseRoi;
-            if (allerGauche && posX > 0) posX -= vitesseRoi;
-            if (allerDroite && posX < this.ActualWidth - 20) posX += vitesseRoi;
+            bool enMouvement = false;
 
-            Canvas.SetLeft(formeRoi, posX);
-            Canvas.SetTop(formeRoi, posY);
+            // Détection du mouvement et de la direction
+            if (allerHaut && posY > 0)
+            {
+                posY -= vitesseRoi;
+                direction = "haut";
+                enMouvement = true;
+            }
+            else if (allerBas && posY < this.ActualHeight - imageDragon.Height)
+            {
+                posY += vitesseRoi;
+                direction = "face";
+                enMouvement = true;
+            }
+
+            // Note : j'utilise 'else if' pour éviter les diagonales bizarres, 
+            // mais tu peux garder des 'if' simples si tu préfères.
+            if (allerGauche && posX > 0)
+            {
+                posX -= vitesseRoi;
+                direction = "gauche";
+                enMouvement = true;
+            }
+            else if (allerDroite && posX < this.ActualWidth - imageDragon.Width)
+            {
+                posX += vitesseRoi;
+                direction = "droite";
+                enMouvement = true;
+            }
+
+            // Gestion de l'animation
+            if (enMouvement)
+            {
+                compteurAnimation++;
+
+                // On change d'image tous les 5 "tours" de boucle (pour ralentir l'animation)
+                // Sinon ça clignote trop vite
+                if (compteurAnimation > 5)
+                {
+                    numeroImage++;
+                    if (numeroImage > 3) numeroImage = 1; // Retour à 1 après 3
+
+                    MettreAJourSprite(); // On charge la nouvelle image
+                    compteurAnimation = 0; // Reset du compteur
+                }
+            }
+            else
+            {
+                // Optionnel : Si le joueur s'arrête, on remet l'image 1 (position statique)
+                if (numeroImage != 1)
+                {
+                    numeroImage = 1;
+                    MettreAJourSprite();
+                }
+            }
+
+            Canvas.SetLeft(imageDragon, posX);
+            Canvas.SetTop(imageDragon, posY);
         }
 
         private void GererApparitionEnnemis()
@@ -228,8 +311,8 @@ namespace GameOfThrones
         {
             Ellipse projectile = new Ellipse { Width = 10, Height = 10, Fill = Brushes.Yellow };
 
-            double departX = Canvas.GetLeft(formeRoi) + 10;
-            double departY = Canvas.GetTop(formeRoi) + 10;
+            double departX = Canvas.GetLeft(imageDragon) + 25; // +25 car l'image fait 50 de large (pour centrer)
+            double departY = Canvas.GetTop(imageDragon) + 25;
 
             Canvas.SetLeft(projectile, departX);
             Canvas.SetTop(projectile, departY);
@@ -299,6 +382,7 @@ namespace GameOfThrones
          
         }
 
+  
     }
 }
 
