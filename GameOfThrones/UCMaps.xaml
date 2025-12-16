@@ -8,7 +8,7 @@
              d:DesignHeight="600" d:DesignWidth="1000">
     <Grid>
 
-        <RadioButton x:Name="mpJungle" Margin="551,121,137,271" Click="mpJungle_Click"  >
+        <RadioButton x:Name="Jungle" Margin="551,121,137,271" Click="Map_Click">
             <RadioButton.Content>
                 <Image Source="/RESSOURCES/MAPS/MapJungle.jpg" Width="286" Height="224"/>
 
@@ -17,7 +17,7 @@
         </RadioButton>
 
 
-        <RadioButton x:Name="mpHiver" Margin="64,121,622,271" Click="mpHiver_Click"   >
+        <RadioButton x:Name="Hiver" Margin="64,121,622,271" Click="Map_Click"   >
             <RadioButton.Content>
                 <Image  Source="/RESSOURCES/MAPS/MapHiver.jpg" Width="285" Height="225" />
 
@@ -27,7 +27,7 @@
 
 
 
-        <RadioButton x:Name="mpSable" Margin="64,329,622,63" Click="mpSable_Click"   >
+        <RadioButton x:Name="Sable" Margin="64,329,622,63" Click="Map_Click"   >
             <Image  Source="/RESSOURCES/MAPS/MapSable.jpg" Width="285" Height="225" />
 
         </RadioButton>
@@ -41,7 +41,7 @@
         <Button x:Name="but_retour" Content="Retour" HorizontalAlignment="Left" Margin="37,10,0,0" VerticalAlignment="Top" Width="140" Height="45" FontSize="22" Background="#FF442626" Foreground="White" FontWeight="Bold"/>
 
         <Button x:Name="but_appliquer" Content="OK" HorizontalAlignment="Center" Margin="0,520,0,0" VerticalAlignment="Top" Width="230" Height="70" FontSize="36" Background="#FF442626" Foreground="White" FontWeight="Bold" IsEnabled="False"/>
-        <RadioButton x:Name="mpLave" Margin="551,329,135,63" Click="mpLave_Click"   >
+        <RadioButton x:Name="Lave" Margin="551,329,135,63" Click="Map_Click"   >
             <Image  Source="/RESSOURCES/MAPS/MapLave.jpg" Width="285" Height="225" />
 
         </RadioButton>

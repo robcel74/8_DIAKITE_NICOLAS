@@ -53,7 +53,7 @@ namespace GameOfThrones
             UCJeu uc = new UCJeu();
             AireJeu.Content = uc;
             musiqueFond.Stop();
-            
+            uc.but_Pause.Click += AfficheUCPause;
 
         }
 
@@ -83,6 +83,16 @@ namespace GameOfThrones
             UCReglesJeu uc = new UCReglesJeu();
             AireJeu.Content = uc;
 
+        }
+
+
+        public void AfficheUCPause(object sender, RoutedEventArgs e)
+        {
+            UCPause uc = new UCPause();
+            AireJeu.Content = uc;
+            uc.butReprendre.Click += AfficheUCJeu;
+            uc.butMaps.Click += AfficheUCMaps;
+            uc.butQuitter.Click += RetourUCDemarrage;
         }
 
 
