@@ -31,6 +31,7 @@ namespace GameOfThrones
         Rectangle formeDonjon;
         Image imageDragon;
         double vitesseRoi = 5;
+        SoundPlayer sonTir;
 
         // 2. VARIABLES POUR L'ANIMATION
         int numeroImage = 1;          // Sera 1, 2 ou 3
@@ -49,6 +50,7 @@ namespace GameOfThrones
         public UCJeu()
         {
             InitializeComponent();
+
             string nomFichierImage = $"pack://application:,,,/RESSOURCES/MAPS/Map{MainWindow.Map}.jpg";
             imgMap.Source = new BitmapImage(new Uri(nomFichierImage));
 

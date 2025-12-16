@@ -98,9 +98,9 @@
     <Resource Include="RESSOURCES\MAPS\MapSable.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="RESSOURCES\MUSIQUES\archer.wav">
+    <Content Include="RESSOURCES\MUSIQUES\archer.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+    </Content>
     <Resource Include="RESSOURCES\MUSIQUES\dragon_qui_crache.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
