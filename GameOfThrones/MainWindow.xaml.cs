@@ -1,5 +1,6 @@
 ﻿using System.Media;
 using System.Windows;
+using System.Windows.Input;
 using System.Windows.Media;
 
 namespace GameOfThrones
@@ -11,6 +12,12 @@ namespace GameOfThrones
 
     public partial class MainWindow : Window
     {
+
+        public Key ToucheHaut { get; set; } = Key.Z;
+        public Key ToucheBas { get; set; } = Key.S;
+        public Key ToucheGauche { get; set; } = Key.Q;
+        public Key ToucheDroite { get; set; } = Key.D;
+
         private MediaPlayer musiqueFond;
         public int NiveauDifficulte = 0;
 
@@ -24,7 +31,11 @@ namespace GameOfThrones
 
 
         //GESTION DES UC
-
+        private void PasserEnGrandEcran(object sender, EventArgs e)
+        {
+            WindowState = WindowState.Maximized;
+            ResizeMode = ResizeMode.NoResize;
+        }
         private void AfficheUCDemarrage()
         {
             UCDemarrage uc = new UCDemarrage();

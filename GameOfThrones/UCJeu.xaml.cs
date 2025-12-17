@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Media;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -21,17 +22,14 @@ namespace GameOfThrones
     /// Logique d'interaction pour UCJeu.xaml
     /// </summary>
     public partial class UCJeu : UserControl
-    {
-    
-        DispatcherTimer minuteurJeu = new DispatcherTimer();
-        
+    {    
+        DispatcherTimer minuteurJeu = new DispatcherTimer();        
         bool allerHaut, allerBas, allerGauche, allerDroite;
 
         // Éléments du jeu
         Rectangle formeDonjon;
         Image imageDragon;
-        double vitesseRoi = 5;
-        
+        double vitesseRoi = 5;    
 
         // 2. VARIABLES POUR L'ANIMATION
         int numeroImage = 1;          // Sera 1, 2 ou 3
@@ -52,18 +50,13 @@ namespace GameOfThrones
         public UCJeu()
         {
             InitializeComponent();
-
             string nomFichierImage = $"pack://application:,,,/RESSOURCES/MAPS/Map{MainWindow.Map}.jpg";
             imgMap.Source = new BitmapImage(new Uri(nomFichierImage));
-
-
 
             // Configuration du minuteur (environ 60 images par seconde)
             minuteurJeu.Interval = TimeSpan.FromMilliseconds(16);
             minuteurJeu.Tick += BouclePrincipaleJeu;
-        }
-
-        // --- Événements Liés au XAML ---
+        }        
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
@@ -88,20 +81,50 @@ namespace GameOfThrones
 
         private void UserControl_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Z) allerHaut = true;
-            if (e.Key == Key.S) allerBas = true;
-            if (e.Key == Key.Q) allerGauche = true;
-            if (e.Key == Key.D) allerDroite = true;
+            // On récupère la configuration depuis la fenêtre principale
+            MainWindow fenetre = (MainWindow)Window.GetWindow(this);
+
+            // On compare avec les variables de la fenêtre
+            if (e.Key == fenetre.ToucheHaut)
+            {
+                allerHaut = true;
+            }
+            else if (e.Key == fenetre.ToucheBas)
+            {
+                allerBas = true;
+            }
+            else if (e.Key == fenetre.ToucheGauche)
+            {
+                allerGauche = true;
+            }
+            else if (e.Key == fenetre.ToucheDroite)
+            {
+                allerDroite = true;
+            }
         }
 
         private void UserControl_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Z) allerHaut = false;
-            if (e.Key == Key.S) allerBas = false;
-            if (e.Key == Key.Q) allerGauche = false;
-            if (e.Key == Key.D) allerDroite = false;
-        }
+            MainWindow fenetre = (MainWindow)Window.GetWindow(this);
 
+            // On compare avec les variables de la fenêtre
+            if (e.Key == fenetre.ToucheHaut)
+            {
+                allerHaut = false;
+            }
+            else if (e.Key == fenetre.ToucheBas)
+            {
+                allerBas = false;
+            }
+            else if (e.Key == fenetre.ToucheGauche)
+            {
+                allerGauche = false;
+            }
+            else if (e.Key == fenetre.ToucheDroite)
+            {
+                allerDroite = false;
+            }
+        }
        
 
         private void DemarrerPartie()
@@ -125,11 +148,9 @@ namespace GameOfThrones
                 if (niveau == 0) vitesseEnnemiActuelle = 2; // Facile : lent
                 else if (niveau == 1) vitesseEnnemiActuelle = 4; // Moyen : rapide
                 else vitesseEnnemiActuelle = 6; // Difficile : très rapide
-            }
-           
+            }           
 
-            // 2. Réinitialisation de l'affichage
-        
+            // 2. Réinitialisation de l'affichage        
 
             panelVie = new StackPanel { Orientation = Orientation.Horizontal };
 
@@ -318,7 +339,7 @@ namespace GameOfThrones
 
             for (int i = listeEnnemis.Count - 1; i >= 0; i--)
             {
-                Ellipse ennemiCourant = listeEnnemis[i];
+                 Ellipse ennemiCourant = listeEnnemis[i];
                 CalculerMouvementEnnemi(ennemiCourant);
 
                 Rect hitboxEnnemi = new Rect(Canvas.GetLeft(ennemiCourant), Canvas.GetTop(ennemiCourant), ennemiCourant.Width, ennemiCourant.Height);
@@ -439,9 +460,7 @@ namespace GameOfThrones
             estJeuEnCours = false;
             DemarrerPartie();
          
-        }
-
-  
+        }  
     }
 }
 

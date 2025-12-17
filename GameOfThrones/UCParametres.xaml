@@ -13,28 +13,41 @@
                 <GradientStop Color="#FFB98E8E" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label x:Name="lab_musique" Content="Musique" HorizontalAlignment="Left" Margin="117,110,0,0" VerticalAlignment="Top" FontSize="48" FontWeight="Bold"/>
-        <Label x:Name="lab_effet" Content="Effet Sonore" HorizontalAlignment="Left" Margin="117,200,0,0" VerticalAlignment="Top" FontSize="48" FontWeight="Bold"/>
-        <Label x:Name="lab_diff" Content="Difficulté" HorizontalAlignment="Left" Margin="117,290,0,0" VerticalAlignment="Top" FontSize="48" FontWeight="Bold"/>
-        <Image x:Name="imgSon_musique" Margin="500,120,446,426" Source="/RESSOURCES/icone_son.png" Stretch="Fill"/>
-        <Image x:Name="imgSon_effet" Margin="500,210,446,336" Source="/RESSOURCES/icone_son.png" Stretch="Fill"/>
+        <Label x:Name="lab_musique" Content="Musique" HorizontalAlignment="Left" Margin="117,72,0,0" VerticalAlignment="Top" FontSize="48" FontWeight="Bold"/>
+        <Label x:Name="lab_diff" Content="Difficulté" HorizontalAlignment="Left" Margin="117,143,0,0" VerticalAlignment="Top" FontSize="48" FontWeight="Bold"/>
+        <Label x:Name="lab_touches" Content="Touches" HorizontalAlignment="Left" Margin="109,300,0,0" VerticalAlignment="Top" FontSize="48" FontWeight="Bold"/>
+        <Image x:Name="imgSon_musique" Margin="500,88,446,458" Source="/RESSOURCES/icone_son.png" Stretch="Fill"/>
         <Button x:Name="but_retour" Content="Retour" HorizontalAlignment="Left" Margin="37,10,0,0" VerticalAlignment="Top" Width="140" Height="45" FontSize="22" Background="#FF442626" Foreground="White" FontWeight="Bold"/>
-        <Button x:Name="but_appliquer" Content="OK" HorizontalAlignment="Center" Margin="0,459,0,0" VerticalAlignment="Top" Width="230" Height="70" FontSize="36" Background="#FF442626" Foreground="White" FontWeight="Bold"/>
+        <Button x:Name="but_appliquer" Content="OK" HorizontalAlignment="Left" Margin="585,490,0,0" VerticalAlignment="Top" Width="230" Height="70" FontSize="36" Background="#FF442626" Foreground="White" FontWeight="Bold"/>
+        <Button x:Name="but_aggrandir" Content="Agrandir fenêtre" HorizontalAlignment="Left" Margin="136,495,0,0" VerticalAlignment="Top" Width="230" Height="70" FontSize="24" Background="#FF442626" Foreground="White" FontWeight="Bold" />
 
         <Slider x:Name="SliderVolume" 
                 Width="200" 
                 Minimum="0" 
                 Maximum="1" 
                 LargeChange="0.1"
-                ValueChanged="SliderVolume_ValueChanged" Margin="615,134,185,440" Height="25">
-           
+                ValueChanged="SliderVolume_ValueChanged" Margin="615,102,185,472" Height="25">
+
         </Slider>
 
-        <ComboBox x:Name="ComboDifficulte" Width="200" SelectedIndex="0" Height="50" Margin="500,311,300,239" FontSize="34" FontWeight="Bold" SelectionChanged="ComboDifficulte_SelectionChanged">
+        <ComboBox x:Name="ComboDifficulte" Width="200" SelectedIndex="0" Height="50" Margin="500,159,300,391" FontSize="34" FontWeight="Bold" SelectionChanged="ComboDifficulte_SelectionChanged">
             <ComboBoxItem>Facile</ComboBoxItem>
             <ComboBoxItem>Moyen</ComboBoxItem>
             <ComboBoxItem>Difficile</ComboBoxItem>
         </ComboBox>
+
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="500,242,0,0">
+
+
+            <Button x:Name="BtnHaut" Content="Haut : Z" Click="BtnChangerTouche_Click" Width="300" Height="50" Margin="5" FontWeight="Bold" FontSize="20"/>
+            <Button x:Name="BtnGauche" Content="Gauche : Q" Click="BtnChangerTouche_Click" Width="300" Height="50" FontWeight="Bold" FontSize="20"/>
+
+            <Button x:Name="BtnBas" Content="Bas : S" Click="BtnChangerTouche_Click" Width="300" Height="50" Margin="5" FontWeight="Bold" FontSize="20"/>
+            <Button x:Name="BtnDroite" Content="Droite : D" Click="BtnChangerTouche_Click" Width="300" Height="50" FontSize="20" FontWeight="Bold"/>
+
+
+        </StackPanel>
+
 
 
 
