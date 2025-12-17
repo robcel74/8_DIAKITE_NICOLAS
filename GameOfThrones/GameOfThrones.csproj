@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>RESSOURCES\icone.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,6 +24,7 @@
     <None Remove="RESSOURCES\DRAGON\dragon_haut3.png" />
     <None Remove="RESSOURCES\EcranDemarrage.jpg" />
     <None Remove="RESSOURCES\gameover.jpg" />
+    <None Remove="RESSOURCES\icone.ico" />
     <None Remove="RESSOURCES\icone_son.png" />
     <None Remove="RESSOURCES\ImgPause.png" />
     <None Remove="RESSOURCES\levelup.jpg" />
@@ -78,6 +80,9 @@
     <Resource Include="RESSOURCES\gameover.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="RESSOURCES\icone.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="RESSOURCES\ImgPause.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -102,6 +107,7 @@
     <Resource Include="RESSOURCES\MAPS\MapSable.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Content Include="RESSOURCES\icone.ico" />
     <Content Include="RESSOURCES\MUSIQUES\archer.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
