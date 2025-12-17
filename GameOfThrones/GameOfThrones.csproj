@@ -35,6 +35,7 @@
     <None Remove="RESSOURCES\MUSIQUES\dragon_qui_crache.mp3" />
     <None Remove="RESSOURCES\MUSIQUES\dragon_qui_vole.mp3" />
     <None Remove="RESSOURCES\regles.jpg" />
+    <None Remove="RESSOURCES\vie.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -118,6 +119,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="RESSOURCES\regles.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="RESSOURCES\vie.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

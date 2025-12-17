@@ -31,7 +31,7 @@ namespace GameOfThrones
         Rectangle formeDonjon;
         Image imageDragon;
         double vitesseRoi = 5;
-        SoundPlayer sonTir;
+        
 
         // 2. VARIABLES POUR L'ANIMATION
         int numeroImage = 1;          // Sera 1, 2 ou 3
@@ -47,6 +47,7 @@ namespace GameOfThrones
         int compteurApparitionEnnemi = 0;
         bool estJeuEnCours = false;
         double vitesseEnnemiActuelle = 2;
+        StackPanel panelVie;
 
         public UCJeu()
         {
@@ -101,7 +102,7 @@ namespace GameOfThrones
             if (e.Key == Key.D) allerDroite = false;
         }
 
-        // --- Méthodes Logiques (PascalCase) ---
+       
 
         private void DemarrerPartie()
         {
@@ -128,11 +129,23 @@ namespace GameOfThrones
            
 
             // 2. Réinitialisation de l'affichage
-            StatusText.Text = "Vie Donjon: 100";
-            if (!GameCanvas.Children.Contains(StatusText))
+        
+
+            panelVie = new StackPanel { Orientation = Orientation.Horizontal };
+
+            for (int i = 0; i < 5; i++)
             {
-                GameCanvas.Children.Add(StatusText);
+                Image coeur = new Image { Width = 30, Height = 30 };
+                // Assure-toi que "vie.png" est bien dans le dossier RESSOURCES
+                coeur.Source = new BitmapImage(new Uri("pack://application:,,,/RESSOURCES/vie.png"));
+
+                panelVie.Children.Add(coeur);
             }
+
+            // On place le tout en haut à gauche
+            Canvas.SetLeft(panelVie, 10);
+            Canvas.SetTop(panelVie, 10);
+            GameCanvas.Children.Add(panelVie);
 
             // 3. Calcul du centre
             // Attention : Au tout premier lancement, ActualWidth peut être 0.
@@ -159,6 +172,25 @@ namespace GameOfThrones
 
             // 6. Lancement du jeu
             minuteurJeu.Start();
+        }
+        private void MettreAJourCoeurs()
+        {
+            // 100 PV divisé par 20 = 5 coeurs. 
+            // Si on a 80 PV, ça fait 4.
+            int nombreCoeursVisibles = pointsVieDonjon / 20;
+
+            for (int i = 0; i < panelVie.Children.Count; i++)
+            {
+                // Si le coeur est dans la limite des PV restants, on l'affiche, sinon on le cache
+                if (i < nombreCoeursVisibles)
+                {
+                    panelVie.Children[i].Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    panelVie.Children[i].Visibility = Visibility.Hidden;
+                }
+            }
         }
         private void MettreAJourSprite()
         {
@@ -294,9 +326,13 @@ namespace GameOfThrones
                 // Collision avec le donjon
                 if (hitboxEnnemi.IntersectsWith(hitboxDonjon))
                 {
+                    // 1. On retire 20 PV (pour qu'un coeur entier disparaisse d'un coup)
                     pointsVieDonjon -= 10;
-                    StatusText.Text = "Vie Donjon: " + pointsVieDonjon;
 
+                    // 2. Au lieu de changer le texte, on met à jour les images
+                    MettreAJourCoeurs();
+
+                    // Le reste ne change pas
                     GameCanvas.Children.Remove(ennemiCourant);
                     listeEnnemis.RemoveAt(i);
 
