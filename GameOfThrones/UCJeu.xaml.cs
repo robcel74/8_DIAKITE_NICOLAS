@@ -46,6 +46,7 @@ namespace GameOfThrones
         int pointsVieDonjon = 100;
         int compteurApparitionEnnemi = 0;
         bool estJeuEnCours = false;
+        double vitesseEnnemiActuelle = 2;
 
         public UCJeu()
         {
@@ -104,39 +105,59 @@ namespace GameOfThrones
 
         private void DemarrerPartie()
         {
+            // 1. Nettoyage
             GameCanvas.Children.Clear();
             listeEnnemis.Clear();
             listeProjectiles.Clear();
             pointsVieDonjon = 100;
 
-            // Réinitialisation de l'affichage
+           
+            // On récupère la fenêtre principale pour lire le niveau choisi
+            MainWindow fenetre = (MainWindow)Window.GetWindow(this);
+
+            if (fenetre != null)
+            {
+                // On récupère la variable : 0 (Facile), 1 (Moyen) ou 2 (Difficile)
+                int niveau = fenetre.NiveauDifficulte;
+
+                // On règle la vitesse des ennemis en conséquence
+                if (niveau == 0) vitesseEnnemiActuelle = 2; // Facile : lent
+                else if (niveau == 1) vitesseEnnemiActuelle = 4; // Moyen : rapide
+                else vitesseEnnemiActuelle = 6; // Difficile : très rapide
+            }
+           
+
+            // 2. Réinitialisation de l'affichage
             StatusText.Text = "Vie Donjon: 100";
             if (!GameCanvas.Children.Contains(StatusText))
             {
                 GameCanvas.Children.Add(StatusText);
             }
 
-            // Calcul du centre
-            double centreX = this.ActualWidth / 2;
-            double centreY = this.ActualHeight / 2;
+            // 3. Calcul du centre
+            // Attention : Au tout premier lancement, ActualWidth peut être 0.
+            // Petite sécurité pour éviter que tout apparaisse dans le coin en haut à gauche
+            double centreX = (this.ActualWidth > 0) ? this.ActualWidth / 2 : 400;
+            double centreY = (this.ActualHeight > 0) ? this.ActualHeight / 2 : 225;
 
-            // Création du Donjon
-            formeDonjon = new Rectangle { Width = 60, Height = 60, Fill = Brushes.Gray, Stroke = Brushes.White };
-            Canvas.SetLeft(formeDonjon, centreX - 30);
-            Canvas.SetTop(formeDonjon, centreY - 30);
+            // 4. Création du Donjon
+            formeDonjon = new Rectangle { Width = 100, Height = 100, Fill = Brushes.Transparent, Stroke = Brushes.Transparent };
+            Canvas.SetLeft(formeDonjon, centreX - 50);
+            Canvas.SetTop(formeDonjon, centreY - 50);
             GameCanvas.Children.Add(formeDonjon);
 
-            // Création du Roi
+            // 5. Création du Roi (Dragon)
             imageDragon = new Image();
-            imageDragon.Width = 50;  // Ajuste la taille selon tes images
-            imageDragon.Height = 50;
+            imageDragon.Width = 100;
+            imageDragon.Height = 100;
 
-            MettreAJourSprite();
+            MettreAJourSprite(); // Charge l'image initiale
 
             Canvas.SetLeft(imageDragon, centreX);
             Canvas.SetTop(imageDragon, centreY + 50);
             GameCanvas.Children.Add(imageDragon);
 
+            // 6. Lancement du jeu
             minuteurJeu.Start();
         }
         private void MettreAJourSprite()
@@ -286,7 +307,7 @@ namespace GameOfThrones
 
         private void CalculerMouvementEnnemi(Ellipse ennemi)
         {
-            double vitesseEnnemi = 2;
+            double vitesseEnnemi = vitesseEnnemiActuelle;
             double posX = Canvas.GetLeft(ennemi);
             double posY = Canvas.GetTop(ennemi);
 

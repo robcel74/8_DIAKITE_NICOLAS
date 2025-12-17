@@ -12,7 +12,7 @@ namespace GameOfThrones
     public partial class MainWindow : Window
     {
         private MediaPlayer musiqueFond;
-        private static SoundPlayer sonCadeauGagne;
+        public int NiveauDifficulte = 0;
 
         public static string Map { get; set; }
         public MainWindow()
@@ -62,6 +62,7 @@ namespace GameOfThrones
             UCParametres uc = new UCParametres();
             AireJeu.Content = uc;
             uc.but_retour.Click += RetourUCDemarrage;
+            uc.but_appliquer.Click += RetourUCDemarrage;
         }
 
         private void RetourUCDemarrage(object sender, RoutedEventArgs e)

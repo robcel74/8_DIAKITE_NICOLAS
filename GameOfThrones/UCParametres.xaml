@@ -30,7 +30,7 @@
            
         </Slider>
 
-        <ComboBox Width="200" SelectedIndex="0" Height="50" Margin="500,311,300,239" FontSize="34" FontWeight="Bold">
+        <ComboBox x:Name="ComboDifficulte" Width="200" SelectedIndex="0" Height="50" Margin="500,311,300,239" FontSize="34" FontWeight="Bold" SelectionChanged="ComboDifficulte_SelectionChanged">
             <ComboBoxItem>Facile</ComboBoxItem>
             <ComboBoxItem>Moyen</ComboBoxItem>
             <ComboBoxItem>Difficile</ComboBoxItem>

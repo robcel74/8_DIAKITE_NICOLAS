@@ -29,6 +29,10 @@ namespace GameOfThrones
             // Au chargement, on met le slider à la bonne position par rapport au volume actuel
             MainWindow fenetre = (MainWindow)Window.GetWindow(this);
             SliderVolume.Value = fenetre.GetVolumeActuel();
+
+            // 2. GESTION DE LA DIFFICULTÉ (Nouveau)
+            // On remet le ComboBox sur la difficulté mémorisée (0, 1 ou 2)
+            ComboDifficulte.SelectedIndex = fenetre.NiveauDifficulte;
         }
 
         private void SliderVolume_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -42,6 +46,19 @@ namespace GameOfThrones
             if (fenetre != null)
             {
                 fenetre.ChangerVolume(SliderVolume.Value);
+            }
+        }
+
+        private void ComboDifficulte_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            MainWindow fenetre = (MainWindow)Window.GetWindow(this);
+
+            // On vérifie fenetre != null ET que la sélection est valide (pas -1)
+            if (fenetre != null && ComboDifficulte.SelectedIndex >= 0)
+            {
+                // On met à jour la variable globale dans MainWindow
+                // 0 = Facile, 1 = Moyen, 2 = Difficile
+                fenetre.NiveauDifficulte = ComboDifficulte.SelectedIndex;
             }
         }
     }
