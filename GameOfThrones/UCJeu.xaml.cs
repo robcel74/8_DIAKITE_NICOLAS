@@ -148,8 +148,8 @@ namespace GameOfThrones
 
             // 5. Création du Roi (Dragon)
             imageDragon = new Image();
-            imageDragon.Width = 100;
-            imageDragon.Height = 100;
+            imageDragon.Width = 102;
+            imageDragon.Height = 102;
 
             MettreAJourSprite(); // Charge l'image initiale
 
